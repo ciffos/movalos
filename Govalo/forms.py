@@ -2,7 +2,7 @@ from socket import fromshare
 from django import forms
 from .models import sexos
 from .models import estatusP
-
+from .models import *
 
 class ClienteForms(forms.Form):
     nombre =      forms.CharField(max_length=50)
@@ -23,3 +23,8 @@ class GYOForms(forms.Form):
     inicio_de_Suscripcion =   forms.DateField()
     Estado_de_Pedido = forms.CharField(widget=forms.Select(choices=estatusP))
 
+class PedidosForms(forms.Form):
+    suscripcion = models.IntegerField(primary_key=True)
+    unidad_Suscripta = models.CharField(max_length=30)
+    unidad_Solicitada = models.CharField(max_length=30)
+    Fecha_ingreso_Pedido = models.DateField()
