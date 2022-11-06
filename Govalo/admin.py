@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from MODULOS.Govalo.models import Cliente
-from MODULOS.Govalo.models import *
+from Govalo.models import Cliente
+from Govalo.models import *
 
 # Register your models here.
 
