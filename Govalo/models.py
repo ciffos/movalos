@@ -11,7 +11,14 @@ sexos=[
 estatusP=[
         ("P","Pendiente"),
         ("A", "Aprobado"),
+    ]
+activo=[
+        ("SI","Activo"),
+        ("NO", "Inactivo"),
     ]    
+
+
+
 
 class Cliente(models.Model):
     nombre =      models.CharField(max_length=50)
@@ -21,13 +28,15 @@ class Cliente(models.Model):
     dni =         models.CharField(max_length=8,primary_key= True)
     telefono =    models.IntegerField() 
     sexo = models.CharField(max_length=1, choices=sexos) 
+    estado_cliente= models.CharField(max_length=2, choices=activo)
     def __str__(self):
         txt = "{0}"
         return txt.format(self.nombre , self.apellido)
 
-def nombreCompleto (self):
-    txt ="{0},{1},{2}"
-    return txt.format(Self.apellido, Self.nombre, Self.email)
+    def nombreCompleto (self):
+        txt ="{0},{1},{2}"
+        return txt.format(Self.apellido, Self.nombre, Self.email)
+   
 
 class GYO (models.Model):
 
