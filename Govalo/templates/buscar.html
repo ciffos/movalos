@@ -1,0 +1,23 @@
+
+
+{% block contenidoquecambia %}
+    
+    {% if object_list %}
+
+    {% for cliente in object_list %}
+
+    <ul>
+        <li>
+        <h4>Nombre: {{cliente.nombre}}<br/> Apellido: {{cliente.apellido}}<br/> Telefono: {{cliente.telefono}}<br/> Email: {{cliente.email}}<br/> Telefono: {{cliente.telefono}}<br/> sexo: {{cliente.sexo}}<br/> Estado_cliente: {{cliente.estado_cliente}}<br/></h4>
+        </li>
+{% endfor %} 
+
+    </ul>
+
+{% else %} 
+<h4>cliente no encontrado</h4>
+    {% endif %}
+
+{% endblock %}
+
+    

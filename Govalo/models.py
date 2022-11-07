@@ -13,8 +13,8 @@ estatusP=[
         ("A", "Aprobado"),
     ]
 activo=[
-        ("SI","Activo"),
-        ("NO", "Inactivo"),
+        ("ACTIVO","Activo"),
+        ("NO_activo", "Inactivo"),
     ]    
 
 
@@ -28,7 +28,7 @@ class Cliente(models.Model):
     dni =         models.CharField(max_length=8,primary_key= True)
     telefono =    models.IntegerField() 
     sexo = models.CharField(max_length=1, choices=sexos) 
-    estado_cliente= models.CharField(max_length=2, choices=activo)
+    estado_cliente= models.CharField(max_length=20, choices=activo)
     def __str__(self):
         txt = "{0}"
         return txt.format(self.nombre , self.apellido)

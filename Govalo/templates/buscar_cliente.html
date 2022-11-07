@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+<body>
+    
+    {% block contenidoquecambia %}
+      
+    <ul>
+        <form action="{% url 'buscar' %}" method="GET">{% csrf_token %}
+            <p>Ingrese DNI de Cliente a buscar:</p>
+            <input type="text"
+                name="dni"
+                placeholder="Ingrese DNI">
+            <input type="submit" value="Buscar">
+        {% include 'buscar.html' %}
+        </form>
+    </ul>
+    {% endblock contenidoquecambia %}
+    <section>
+        
+        
+    </section>
+</body>
